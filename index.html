@@ -82,6 +82,39 @@
       <div class="projects-grid">
         <article class="project-card">
           <button type="button" class="project-card-image is-diagram" data-lightbox-trigger aria-label="Expand diagram">
+            <img src="assets/images/mv_commentary_workflow.svg"
+                 alt="Diagram: two Bloomberg exports feed two reader skills, which pass structured market data and the day's key economic releases into a Morning Views prompt that applies a house-style skill and drafts a formatted daily commentary for analyst review."
+                 loading="lazy">
+          </button>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Automated daily market commentary stack</h3>
+
+            <div class="project-card-section">
+              <span class="project-card-label">Problem</span>
+              <p class="project-card-text">Every trading day on an Asia credit desk starts the same way. Overnight market moves and the day's economic calendar have to be pulled together into a Morning Views commentary before the region opens. The raw inputs are scattered across Bloomberg exports, the numbers need consistent formatting, and the house writing style has to be applied every single time. Done by hand it is repetitive, time-pressured work that eats into the start of the day, and small formatting inconsistencies creep in when you are rushing.</p>
+            </div>
+            <div class="project-card-section">
+              <span class="project-card-label">What I built</span>
+              <p class="project-card-text">A stack of reusable Claude skills that turn overnight data into a drafted commentary. One skill reads the Bloomberg market indicators export and pulls UST yields, US and Asian equity indices, CDS spreads, commodities and FX. A second reads the Bloomberg WECO economic calendar and surfaces the releases that matter for the day. A third encodes the house style (UK spelling, consistent number formatting, no em dashes) so tone and presentation stay consistent without re-explaining the rules each time. A Morning Views prompt ties them together and references the style skill rather than duplicating it, so a change made in one place flows through every output.</p>
+            </div>
+            <div class="project-card-section">
+              <span class="project-card-label">Stack</span>
+              <div class="card-tags">
+                <span class="tag">Claude</span>
+                <span class="tag">Claude Skills</span>
+                <span class="tag">Python</span>
+                <span class="tag">Bloomberg data</span>
+              </div>
+            </div>
+            <div class="project-card-section">
+              <span class="project-card-label">Result</span>
+              <p class="project-card-text">Overnight market data and the day's economic calendar are extracted, formatted and drafted into a house-style commentary in one pass, ready for analyst review rather than written from a blank page. The modular design means each piece — market data, macro calendar and style — can be reused and updated on its own, so the stack keeps working as file formats and house conventions change.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button type="button" class="project-card-image is-diagram" data-lightbox-trigger aria-label="Expand diagram">
             <img src="assets/images/indenture_analysis_workflow.png"
                  alt="Diagram: Indenture Analysis Workflow — a bond OM/OC PDF is extracted into a page-indexed text layer, covenant sections are located, 27 fields are extracted with page and quote references, a two-layer QC pass checks completeness and quote accuracy, a covenant-strength analysis is written, and the Indenture Summary, Analysis, Excel field table and HTML verifier are generated for analyst review."
                  loading="lazy">
